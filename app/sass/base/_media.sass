@@ -4,6 +4,11 @@
 /*==========  Desktop First  ==========*/
 
 @media screen and (max-width: 1700px)
+
+  .prices-top
+    &:before
+      left: 20px
+
   .container-large
     max-width: inherit
     width: calc(100% - 40px)
@@ -36,6 +41,31 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .s-prices
+    .container-large
+      &:before
+        content: ''
+        position: absolute
+        width: 1px
+        height: 64px
+        top: -64px
+        left: -1px
+        background-color: #d3d3d3
+
+  .prices-top
+    padding: 30px 0
+    background-color: #fff
+    .section-title
+      background-color: #fff
+      margin-left: auto
+      margin-right: auto
+      display: block
+      width: 310px
+
+  .s-prices
+    &:after
+      display: none
+
   .botline-item
     padding: 15px 30px
     &-desc
@@ -43,6 +73,25 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .prices-top
+    &:before
+      display: none
+
+  .prices-top
+    .section-title
+      width: auto
+      padding: 0
+      text-align: center
+
+  .s-prices
+    .container-large
+      border-left: none
+      &:before
+        display: none
+
+  .section-notice
+    display: none
 
   .mobile-intro
     display: block
@@ -93,6 +142,41 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .s-prices
+    .btn-wrap
+      span
+        display: none
+      .btn
+        width: 100%
+
+
+  .prices-wrap
+    padding-top: 0
+    padding-bottom: 0
+    h3
+      font-size: 15px
+      margin-bottom: 15px
+      padding-left: 22px
+      &:before
+        width: 6px
+        height: 6px
+        +bg-cover
+        top: calc(50% - 6.5px)
+
+
+  .price-item
+    font-size: 12px
+    margin-bottom: 10px
+
+
+  .prices-top
+    .section-title
+      padding: 30px 0 5px
+
+  .section-title
+    font-size: 24px
+    background-color: transparent
+    line-height: 1
 
 /*==========  Mobile First  ==========*/
 
