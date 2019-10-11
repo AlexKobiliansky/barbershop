@@ -1,0 +1,257 @@
+.main-head
+  position: relative
+  +bg-cover
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    background-color: #0c1018
+    opacity: .65
+  .container-large
+    position: relative
+    z-index: 2
+  .btn-wrap
+    display: none
+
+.top-line
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 18px 0
+  .logo
+    display: inline-block
+    margin-right: 45px
+  .call
+    font-size: 21px
+    font-family: "Rex", sans-serif
+    font-weight: 700
+    color: #fff
+    +mt(.3s)
+    margin-left: 114px
+    line-height: 1
+    &:hover
+      color: $accent
+
+.bottom-line
+  display: flex
+  justify-content: center
+  align-items: center
+
+.botline-item
+  display: flex
+  padding: 50px 60px
+  border-right: 1px solid #757c80
+  &-icon
+    margin-right: 15px
+  &-desc
+    text-transform: uppercase
+    color: #fff
+  &:last-child
+    border-right: none
+
+
+.main-mnu
+  display: inline-block
+  ul
+    display: inline-block
+    font-size: 0
+    li
+      display: inline-block
+    a
+      display: inline-block
+      margin: 0 45px
+      color: #fff
+      +mt(.3s)
+      text-transform: uppercase
+      font-size: 16px
+      line-height: 1
+      letter-spacing: 0.05em
+      &:hover
+        color: $accent
+
+.s-intro
+  border-top: 1px solid #757c80
+  border-bottom: 1px solid #757c80
+  height: 560px
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    width: 1px
+    height: calc(50% - 80px)
+    background-color: #757c80
+    left: 0
+    top: 0
+  &:after
+    content: ''
+    position: absolute
+    width: 1px
+    height: calc(50% - 50px)
+    background-color: #757c80
+    right: 0
+    top: 0
+  .section-notice
+    position: absolute
+    color: $accent
+    top: calc(50% - 26px)
+    transform: rotate(270deg)
+    left: -43px
+
+
+.intro-wrap
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  height: 100%
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    width: 1px
+    height: calc(50% - 35px)
+    background-color: #757c80
+    right: 0
+    bottom: 0
+  &:before
+    content: ''
+    position: absolute
+    width: 1px
+    height: calc(50% - 50px)
+    background-color: #757c80
+    left: 0
+    bottom: 0
+  h1
+    color: $accent
+    font-weight: 700
+    font-family: "Rex", sans-serif
+    line-height: 1
+    font-size: 60px
+    margin-bottom: 0
+    text-transform: uppercase
+  h2
+    font-weight: normal
+    text-transform: uppercase
+    font-size: 21px
+    line-height: 1
+    margin-bottom: 40px
+    color: #fff
+
+
+.intro-socials
+  position: absolute
+  right: -15px
+  top: calc(50% - 34px)
+  .soc-item
+    display: block
+    text-align: center
+    margin-bottom: 10px
+    .svg
+      height: 18px
+      width: auto
+      fill: $accent
+      +mt(.3s)
+    &:hover
+      .svg
+        fill: darken($accent, 10%)
+
+.hamburger
+  position: relative
+  top: 3px
+  display: none
+
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+  background-color: $accent
+  border-radius: 0
+
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before
+  background-color: $accent
+
+//mmenu customization start
+.mm-menu_theme-dark
+  background-color: $accent
+  text-transform: uppercase
+
+.mm-logo
+  display: block
+  margin: 0 auto
+  transform: scaleY(.51)
+
+.mm-navbars_top
+  border-color: transparent
+
+.mm-listitem, .mm-listitem .mm-btn_next, .mm-listitem .mm-btn_next:before, .mm-listitem:after, .mm-listview
+  border-color: rgba(#fff, .3)
+
+.mm-listitem
+  a
+    padding-top: 14px
+    padding-bottom: 12px
+
+.mm-navbar
+  border: none
+
+
+.mm-menu_theme-dark .mm-navbar a, .mm-menu_theme-dark .mm-navbar>*
+  font-size: 20px
+  color: #fff
+  letter-spacing: 2px
+
+.mm-menu_theme-dark .mm-listview a:not(.mm-btn_next)
+  color: #fff
+//mmenu customization end
+
+.mobile-intro
+  display: none
+  padding: 65px 0
+  text-align: center
+  .logo
+    margin-bottom: 30px
+  h1
+    font-size: 32px
+    line-height: 1
+    color: $accent
+    text-transform: uppercase
+    margin-bottom: 20px
+    font-family: "Rex", sans-serif
+  h2
+    font-size: 15px
+    font-weight: normal
+    margin-bottom: 40px
+    text-transform: uppercase
+  .info-item
+    color: #fff
+    background-color: $accent
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 30px
+    font-size: 12px
+    margin-bottom: 30px
+    text-transform: uppercase
+    margin-left: 15px
+    margin-right: 15px
+    width: calc(100% - 30px)
+    &-icon
+      margin-right: 15px
+    &-desc
+      text-align: left
+  .soc-item
+    vertical-align: center
+    display: inline-block
+    margin-left: 10px
+    .svg
+      height: 14px
+      width: auto
+      +mt(.3s)
+      fill: $text
+      &:hover
+        fill: $accent
+  .socials
+    text-transform: uppercase
+    color: #bdbdbd
+
+
