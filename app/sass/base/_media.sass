@@ -75,7 +75,13 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
-
+  .s-team
+    background-image: none!important
+    .container-large
+      &:before
+        display: none
+      &:after
+        display: none
 
   .prices-top
     &:before
@@ -145,6 +151,21 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .s-team
+    .container-large
+      padding: 40px 0
+
+  .team-item
+    &-img
+      height: 200px
+      margin-bottom: 15px
+    &-name
+      font-size: 15px
+    &-post
+      font-size: 12px
+
+
+
   .s-prices
     padding-bottom: 30px
     .btn-wrap
@@ -175,12 +196,13 @@
 
 
 
-  .prices-top
+  .prices-top, .s-team
     .section-title
       padding: 0 15px
       display: inline-block
       background-color: #fff
       z-index: 2
+      position: relative
       &-wrap
         text-align: center
         position: relative
