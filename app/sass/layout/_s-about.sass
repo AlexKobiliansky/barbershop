@@ -1,0 +1,55 @@
+.s-about
+  background-image: url('../img/bg-about.jpg')
+  +bg-cover
+  .section-title
+    text-transform: uppercase
+
+.about-wrap
+  padding: 40px 0 40px 55px
+  color: #fff
+  text-transform: uppercase
+  font-size: 14px
+  opacity: .8
+  h3
+    font-size: 18px
+    text-transform: uppercase
+    font-family: "Rex", sans-serif
+  ul
+    margin-bottom: 15px
+    li
+      padding-left: 20px
+      margin-bottom: 5px
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        width: 10px
+        height: 10px
+        +bg-cover
+        background-image: url('../img/icons/cross-icon.png')
+        left: 0
+        top: 6px
+
+
+
+.about-socials
+  span
+    display: inline-block
+    font-family: "Lobster", sans-serif
+    text-transform: uppercase
+    font-size: 18px
+    margin-left: 10px
+    opacity: .6
+  .soc-item
+    display: inline-block
+    margin-right: 8px
+    .svg
+      height: 18px
+      width: auto
+      +mt(.3s)
+      fill: #fff
+      opacity: .6
+    &:hover
+      .svg
+        fill: $accent
+        opacity: 1
