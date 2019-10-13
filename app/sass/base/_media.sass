@@ -30,6 +30,14 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .stock-item
+    padding: 50px
+    &-title
+      font-size: 26px
+    &-desc
+      font-size: 14px
+
   .main-mnu
     display: none
 
@@ -81,7 +89,7 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
-  .s-team
+  .s-team, .s-stocks
     background-image: none!important
     .container-large
       &:before
@@ -157,6 +165,18 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .stock-item
+    flex-direction: column
+    &-content
+      align-self: flex-start
+      width: 100%
+      text-align: center
+
+  .s-team, .s-stocks
+    .container-large
+      margin: 0
+      width: 100%
+
   .about-wrap
     padding: 35px 0
     font-size: 12px
@@ -218,7 +238,7 @@
 
 
 
-  .prices-top, .s-team
+  .prices-top, .s-team, .s-stocks
     .section-title
       padding: 0 15px
       display: inline-block
