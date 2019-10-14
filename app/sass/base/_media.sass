@@ -54,6 +54,9 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .foot-mnu
+    display: none
+
   .about-wrap
     padding-left: 0
 
@@ -92,6 +95,10 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .main-foot
+    .container-large
+      border-left: none
 
   .s-contacts
     flex-direction: column
@@ -181,6 +188,28 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .foot-socials
+    display: flex
+
+  .main-foot
+    .container-large
+      margin-left: 0
+      margin-right: 0
+
+  .foot-logo
+    img
+      margin-bottom: 15px
+      //width: 150px
+      //height: auto
+
+  .copyright
+    font-size: 12px
+    text-align: center
+
+  .foot-line
+    padding: 25px 0
+    flex-direction: column
 
   .contacts-wrap
     padding: 20px 30px 40px
