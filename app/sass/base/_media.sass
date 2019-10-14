@@ -31,6 +31,10 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .contacts-wrap
+    padding-right: 50px
+    padding-left: 50px
+
   .stock-item
     padding: 50px
     &-title
@@ -88,6 +92,19 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .s-contacts
+    flex-direction: column
+
+  .map-container
+    height: 250px
+    width: 100%
+
+  .contacts-wrap
+    width: 100%
+    text-align: center
+    .socials
+      display: none
 
   .s-team, .s-stocks
     background-image: none!important
@@ -164,6 +181,19 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .contacts-wrap
+    padding: 20px 30px 40px
+    .btn
+      width: 100%
+
+  .contact-item
+    &-title
+      font-size: 15px
+      margin-bottom: 5px
+    &-desc
+      font-size: 12px
+
 
   .stock-item
     flex-direction: column
