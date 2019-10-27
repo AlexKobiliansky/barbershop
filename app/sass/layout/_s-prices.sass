@@ -19,6 +19,14 @@
   .container-large
     position: relative
     border-left: 1px solid #d3d3d3
+    &:before
+      content: ''
+      position: absolute
+      left: -1px
+      top: -98px
+      width: 1px
+      height: 98px
+      background-color: #d3d3d3
     .section-notice
       position: absolute
       color: $text

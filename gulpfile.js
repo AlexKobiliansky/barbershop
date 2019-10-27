@@ -40,6 +40,8 @@ gulp.task('scripts', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
 		'app/libs/mmenu/jquery.mmenu.all.js',
+		'app/libs/page-scroll-to-id/jquery.malihu.PageScroll2id.js',
+		'app/libs/owl-carousel/owl.carousel.min.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
@@ -58,7 +60,7 @@ gulp.task('rsync', function() {
 	.pipe(rsync({
 		root: 'app/',
 		hostname: 'alexko89@alexko89.beget.tech',
-		destination: 'demos.alexko89.beget.tech/public_html/dirname/',
+		destination: 'demos.alexko89.beget.tech/public_html/barbershop/',
 		// include: ['*.htaccess'], // Includes files to deploy
 		exclude: ['**/Thumbs.db', '**/*.DS_Store'], // Excludes files from deploy
 		recursive: true,

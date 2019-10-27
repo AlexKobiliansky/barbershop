@@ -46,6 +46,18 @@ $(document).ready(function(){
      */
 
 
+    $('.infos-slider').owlCarousel({
+        loop:true,
+        nav: false,
+        items: 1,
+        margin: 0,
+        dots: false,
+        autoHeight: false,
+        navText: ["",""],
+        autoWidth:true,
+    });
+
+
     $('img.svg').each(function(){
         var $img = jQuery(this);
         var imgID = $img.attr('id');
@@ -78,38 +90,45 @@ $(document).ready(function(){
         }, 'xml');
     });
 
+    $('.preloader').fadeOut();
+
+    $(".main-mnu a, .foot-mnu a").mPageScroll2id();
 
 
-    ymaps.ready(function(){
-        var mapId = $('#map'),
-            attitude = mapId.data("att"),
-            longtitude = mapId.data("long"),
-            zoom = mapId.data("zoom"),
-            marker = mapId.data("marker"),
-            map = new ymaps.Map("map", {
-                center: [attitude, longtitude],
-                controls: ['zoomControl'],
-                zoom: zoom
-            }),
 
-            myPlacemark = new ymaps.Placemark(map.getCenter(), {}, {
-                // Опции.
-                // Необходимо указать данный тип макета.
-                iconLayout: 'default#image',
-                // Своё изображение иконки метки.
-                iconImageHref: marker,
-                // Размеры метки.
-                iconImageSize: [74, 74],
-                // Смещение левого верхнего угла иконки относительно
-                // её "ножки" (точки привязки).
-                // iconImageOffset: [-16, -30]
-            });
+    setTimeout(function(){
+        ymaps.ready(function(){
+            var mapId = $('#map'),
+                attitude = mapId.data("att"),
+                longtitude = mapId.data("long"),
+                zoom = mapId.data("zoom"),
+                marker = mapId.data("marker"),
+                map = new ymaps.Map("map", {
+                    center: [attitude, longtitude],
+                    controls: ['zoomControl'],
+                    zoom: zoom
+                }),
 
-        map.geoObjects.add(myPlacemark);
-        map.behaviors.disable('scrollZoom');
+                myPlacemark = new ymaps.Placemark(map.getCenter(), {}, {
+                    // Опции.
+                    // Необходимо указать данный тип макета.
+                    iconLayout: 'default#image',
+                    // Своё изображение иконки метки.
+                    iconImageHref: marker,
+                    // Размеры метки.
+                    iconImageSize: [74, 74],
+                    // Смещение левого верхнего угла иконки относительно
+                    // её "ножки" (точки привязки).
+                    // iconImageOffset: [-16, -30]
+                });
 
-        if ($(window).width() <= 480) {
-            map.behaviors.disable('drag');
-        }
-    });
+            map.geoObjects.add(myPlacemark);
+            map.behaviors.disable('scrollZoom');
+
+            if ($(window).width() <= 480) {
+                map.behaviors.disable('drag');
+            }
+        });
+    }, 2000);
+
 });
